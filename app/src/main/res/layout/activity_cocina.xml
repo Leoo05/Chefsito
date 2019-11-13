@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5B317"
+    android:background="#FFF5a4"
     tools:context=".Cocina">
 
     <ScrollView
@@ -39,7 +39,7 @@
                 android:id="@+id/boton_agregar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#AD4B4B"
+                android:background="#FFAF60"
                 android:text="Agregar" />
 
             <ListView
@@ -50,7 +50,7 @@
                 android:id="@+id/boton_busReceta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#AD4B4B"
+                android:background="#FFAF60"
                 android:onClick="buscarReceta"
                 android:text="Buscar Receta" />
 
@@ -58,7 +58,7 @@
                 android:id="@+id/boton_regresar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#AD4B4B"
+                android:background="#FFAF60"
                 android:onClick="regresar"
                 android:text="Regresar" />
         </LinearLayout>

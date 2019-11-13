@@ -7,17 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Receta extends AppCompatActivity {
-    private Button volver;
+public class Registro extends AppCompatActivity {
+    private Button register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_receta);
-        volver = findViewById(R.id.boton_volver);
-        volver.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_registro);
+        register = findViewById(R.id.button_registro);
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), Cocina.class);
+                Intent intent = new Intent(view.getContext() , Login.class);
                 startActivity(intent);
             }
         });
