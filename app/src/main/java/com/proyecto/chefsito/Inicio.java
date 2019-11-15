@@ -57,6 +57,7 @@ public class Inicio extends AppCompatActivity {
     }
     public void irCocina(View view){
         Intent intent = new Intent(view.getContext(), Cocina.class);
+        intent.putExtra("nick",nick);
         startActivity(intent);
     }
     public static String getStringFromInputStream(InputStream stream) throws IOException {
