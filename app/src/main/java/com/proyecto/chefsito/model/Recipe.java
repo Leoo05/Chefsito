@@ -1,6 +1,6 @@
 package com.proyecto.chefsito.model;
 
-public class Receta {
+public class Recipe {
     private String title;
     private String type;
     private String tag;
@@ -8,7 +8,7 @@ public class Receta {
     private String instructions;
     private String video;
 
-    public Receta(String title, String type, String tag, String description, String instructions, String video){
+    public Recipe(String title, String type, String tag, String description, String instructions, String video){
         setTitle(title);
         setType(type);
         setTag(tag);
