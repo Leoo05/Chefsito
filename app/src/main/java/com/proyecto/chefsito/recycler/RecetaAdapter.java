@@ -8,14 +8,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.proyecto.chefsito.R;
-import com.proyecto.chefsito.model.Receta;
+import com.proyecto.chefsito.model.Recipe;
 
 import java.util.ArrayList;
 
 public class RecetaAdapter extends RecyclerView.Adapter<RecetaViewHolder> {
-    private ArrayList<Receta> recetaArrayList;
-    public RecetaAdapter(ArrayList<Receta> recetaArrayList){
-        this.recetaArrayList = recetaArrayList;
+    private ArrayList<Recipe> recipeArrayList;
+    public RecetaAdapter(ArrayList<Recipe> recipeArrayList){
+        this.recipeArrayList = recipeArrayList;
     }
     @NonNull
     @Override
@@ -28,16 +28,16 @@ public class RecetaAdapter extends RecyclerView.Adapter<RecetaViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RecetaViewHolder holder, int position) {
-        Receta receta = recetaArrayList.get(position);
+        Recipe recipe = recipeArrayList.get(position);
 
-        holder.tv_title.setText(receta.getTitle());
-        holder.tv_description.setText(receta.getDescription());
-        holder.tv_type.setText(receta.getType());
+        holder.tv_title.setText(recipe.getTitle());
+        holder.tv_description.setText(recipe.getDescription());
+        holder.tv_type.setText(recipe.getType());
 
     }
 
     @Override
     public int getItemCount() {
-        return recetaArrayList.size();
+        return recipeArrayList.size();
     }
 }

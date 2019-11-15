@@ -49,7 +49,7 @@ public class Cocina extends AppCompatActivity {
     public void buscarReceta(View view){
         Intent intent = new Intent(view.getContext(), Receta.class);
         intent.putExtra("nick",nick);
-        intent.putExtra("title",ingrediente.getText().toString());
+        intent.putExtra("title",ingredientes.get(0));
         startActivity(intent);
     }
     public void initAdapter(View view){

@@ -24,7 +24,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import com.proyecto.chefsito.model.Receta;
+import com.proyecto.chefsito.model.Recipe;
 import com.proyecto.chefsito.recycler.RecetaAdapter;
 
 public class Inicio extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class Inicio extends AppCompatActivity {
     private String nick;
     private String JsonString;
     private JSONArray jsonArray;
-    private ArrayList<Receta> recetaArrayList;
+    private ArrayList<Recipe> recipeArrayList;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter recAdapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -45,14 +45,14 @@ public class Inicio extends AppCompatActivity {
         this.nick = getIntent().getStringExtra("nick");
         Toast toast = Toast.makeText(getApplicationContext(),"Bienvenido "+nick,Toast.LENGTH_SHORT);
         toast.show();
-        recetaArrayList=new ArrayList<>();
+        recipeArrayList =new ArrayList<>();
         callWebService();
-        while (recetaArrayList.size()==0){
+        while (recipeArrayList.size()==0){
         }
         recyclerView  = findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        recAdapter = new RecetaAdapter(recetaArrayList);
+        recAdapter = new RecetaAdapter(recipeArrayList);
         recyclerView.setAdapter(recAdapter);
     }
     public void irCocina(View view){
@@ -100,7 +100,7 @@ public class Inicio extends AppCompatActivity {
         try {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject receta = jsonArray.getJSONObject(i);
-                this.recetaArrayList.add(new Receta(receta.getString("title"),
+                this.recipeArrayList.add(new Recipe(receta.getString("title"),
                         receta.getString("type"),
                         receta.getString("tag"),
                         receta.getString("description"),
